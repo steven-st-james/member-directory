@@ -5,12 +5,15 @@ export default async function Home() {
   const data = await fetch('https://randomuser.me/api/?results=5');
   const json = await data.json();
   console.log(json)
-  if(!json) return null;
+  if (!json) {
+    return null
+  }
+
   return (
     <>
       <div className="page">
         <div className="maing">
-          {json.results.map(r => {
+          {json.results.map((r: { cell: string; name: { first: string; last: string }, picture: { thumbnail: string; } }) => {
        
               return <div key={r.cell}>
                 <p >{r.name.first} { r.name.last}</p>

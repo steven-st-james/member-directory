@@ -1,8 +1,12 @@
 import React from 'react'
+import MemberDetails from '@/components/MemberDetails'
 
-export default async function Member({params}: {params: {memberId: string}}) {
-    const {memberId} = await params;
+export default function Member({ params }: { params: { memberId: string } }) {
+  const { memberId } = params
+  
   return (
-    <div>Hi I'm. a Member {memberId}</div>
+    <div className="container mx-auto py-8">
+      <MemberDetails memberId={memberId} />
+    </div>
   )
 }
