@@ -1,23 +1,23 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-
+import Card from './_components/card';
+import { CardType } from "./_types/card.types";
+import { PayloadType } from "./_types/payload.type";
+import { formatDate } from "./_utils/dateFormatter";
+import { fetchData } from "./_services/fetch-data";
 export default async function Home() {
-  const data = await fetch('https://randomuser.me/api/?results=5');
-  const json = await data.json();
-  console.log(json)
-  if(!json) return null;
+
+  const data = await fetchData();
+  const { results } = data;
+
   return (
     <>
-      <div className="page">
-        <div className="maing">
-          {json.results.map(r => {
-       
-              return <div key={r.cell}>
-                <p >{r.name.first} { r.name.last}</p>
-                <Image src={r.picture.thumbnail} width={100} height={100} alt="image"/>
+      <div className={styles.page}>
+        <div className={styles.main}>
 
-               </div>
-          
+          {results.map((r: PayloadType) => {
+            const card: CardType = { first: r.name.first, last: r.name.last, age: r.dob.age, img: r.picture.thumbnail, dob: formatDate(new Date(r.dob.date)), email: r.email, phone: r.phone }
+            return <Card {...card} key={r.cell} />
           })}
         </div>
       </div>
