@@ -11,7 +11,6 @@ export type PayloadType = {
     phone: string;
     picture: Picture;
     registerd: Registered;
-
 }
 
 type Dob = {
@@ -32,7 +31,6 @@ type Location = {
     state: string;
     street: Street;
     timezone: Timezone;
-  
 }
 
 type Cooridnates = {

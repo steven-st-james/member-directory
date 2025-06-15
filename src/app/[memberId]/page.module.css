@@ -1,0 +1,39 @@
+.profilecontainer {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container and add some margin */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the content within the container */
+}
+
+.profilepic {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Crop and center the image within the circular container */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+.profileheader h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profileheader p {
+    color: #666; /* Adjust color as needed */
+    margin-bottom: 20px;
+}
+
+.profiledetails {
+    text-align: left; /* Align contact information to the left */
+}
+
+.profiledetails h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profiledetails p {
+    margin-bottom: 8px;
+}

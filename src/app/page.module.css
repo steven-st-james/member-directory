@@ -34,6 +34,7 @@
   justify-content: space-between;
   gap: 10px;
   grid-row-start: 2;
+  width: 60%;
 }
 
 .main ol {
@@ -128,7 +129,7 @@ a.secondary {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 100px) {
   .page {
     padding: 32px;
     padding-bottom: 80px;

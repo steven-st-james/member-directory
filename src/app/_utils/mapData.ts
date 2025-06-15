@@ -13,6 +13,7 @@ export function mapPayloadToMember(payload: PayloadType): Omit<Member, 'id' | 'c
         state: payload.location.state,
         postalCode: parseInt(payload.location.postcode.toString(), 10),
         dob: payload.dob.date,
-        phoneNumber: payload.phone
+        phoneNumber: payload.phone,
+        email: payload.email
     }
 } 
