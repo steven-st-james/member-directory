@@ -1,12 +1,12 @@
-'use server'
 import Image from "next/image";
 import styles from "./page.module.css";
-import { PayloadType } from "./_types/payload.type";
 import { formatDate } from "./_utils/dateFormatter";
 import { fetchData } from "./_services/fetch-data";
-import  MemberView  from './_components/memberview'
-export default async function Home() {
+import MemberView from './_components/memberview'
+import { seedMembers } from './_services/seed-members'
 
+export default async function Home() {
+  await seedMembers();
   const data = await fetchData();
   const { results } = data;
   const handleClick = (id: string) => {

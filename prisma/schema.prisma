@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Member {
+  id          String   @id @default(uuid())
+  first       String
+  last        String
+  age         Int
+  thumbImg    String
+  largeImg    String
+  street      String
+  city        String
+  state       String
+  postalCode  Int
+  dob         String
+  phoneNumber String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

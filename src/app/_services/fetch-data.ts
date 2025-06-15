@@ -1,5 +1,9 @@
-export async function fetchData() {
-    const data = await fetch('https://randomuser.me/api/?results=15&nat=US', { cache: 'force-cache' });
-    return await data.json();
+import { prisma } from '../_lib/prisma'
+import type { Member } from '../../generated/prisma/client'
 
+export async function fetchData() {
+    const members = await prisma.member.findMany({
+        orderBy: { createdAt: 'desc' }
+    });
+    return { results: members };
 }
