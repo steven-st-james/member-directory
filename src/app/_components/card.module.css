@@ -1,24 +1,23 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a subtle shadow */
-  transition: 0.3s; /* Smooth transition on hover */
-  width: 300px; /* Adjust as needed */
-  border-radius: 5px; /* Round the corners */
-  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px; 
+  border-radius: 5px; 
+  overflow: hidden; 
   flex-basis: 50%;
   flex-grow: 1;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Deeper shadow on hover */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
 .container {
-  padding: 16px; /* Add some padding inside the card */
+  padding: 16px;
 }
 
 .card img {
-  /* width: 100%; Make the image fill the card width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Prevent extra space below the image */
+  height: auto;
+  display: block;
 }
