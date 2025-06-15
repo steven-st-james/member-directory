@@ -1,0 +1,28 @@
+.memberViewContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.searchWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--background);
+    padding: 10px 0;
+}
+
+.cardsContainer {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-content: start;
+    transition: all 0.3s ease-in-out;
+} 

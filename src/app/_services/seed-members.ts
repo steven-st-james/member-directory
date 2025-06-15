@@ -5,7 +5,7 @@ export async function seedMembers() {
     const count = await prisma.member.count();
     if (count > 0) return;
 
-    const response = await fetch('https://randomuser.me/api/?results=15&nat=US', { cache: 'no-store' });
+    const response = await fetch('https://randomuser.me/api/?results=20&nat=US', { cache: 'no-store' });
     const data = await response.json();
     await Promise.all(
         data.results.map(async (payload: any) => {
