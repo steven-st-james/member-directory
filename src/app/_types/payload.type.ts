@@ -28,7 +28,7 @@ type Location = {
     city: string;
     coordinates: Cooridnates;
     country: string;
-    postCode: number;
+    postcode: number;
     state: string;
     street: Street;
     timezone: Timezone;
